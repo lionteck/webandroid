@@ -127,22 +127,28 @@ class RemoteImageView extends AsyncTask<Object,Object,Bitmap> implements OnClick
 			float ratio=(float)opt.outWidth/(float)opt.outHeight;
 			int height=0;
 			int width=0;
+			int marx=0;
+			int mary=0;
 			if(ratio>ratio_f){
 				width=context.getResources().getDisplayMetrics().widthPixels;
 				height= (int)Math.floor((float)opt.outHeight*(float)(1/ratio));
 				Log.i("info",width+" "+height+" "+(context.getResources().getDisplayMetrics().heightPixels-height));			
-				im.setPadding(0, (context.getResources().getDisplayMetrics().heightPixels-height)/2,0,0);
 				
+				mary=(context.getResources().getDisplayMetrics().heightPixels-height)/2;
 			}
 			else{
 				height=context.getResources().getDisplayMetrics().heightPixels;
 				width=(int)Math.floor((float)opt.outWidth*(float)(ratio));
 				Log.i("info",width+" "+height+" "+(context.getResources().getDisplayMetrics().widthPixels-width));			
-				im.setPadding(imp.width-width,0,0,0);
+				
+				marx=(context.getResources().getDisplayMetrics().widthPixels-width)/2;
+				
 			    
 			}
 			im.setImageBitmap(Bitmap.createScaledBitmap(m,width, height, true));
-			im.setLayoutParams(new FrameLayout.LayoutParams(width, height));
+			FrameLayout.LayoutParams par=new FrameLayout.LayoutParams(width, height);
+			par.setMargins(marx, mary, 0, 0);
+			im.setLayoutParams(par);
 		}
 	}
 
