@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     ><FrameLayout
+          android:id="@+id/vertlay"
+           android:layout_marginLeft="0dp"
+          android:layout_marginRight="0dp"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <ScrollView
+        android:id="@+id/vert"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:id="@+id/galleryvert"
+    android:orientation="vertical"
+    android:padding="5dip"
+    
+    >
+     
+          
+
+        </LinearLayout>
+    </ScrollView>
+     </FrameLayout>
+<FrameLayout
+          android:id="@+id/horlay"
+          android:layout_marginLeft="0dp"
+          android:layout_marginRight="0dp"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <HorizontalScrollView
+        android:id="@+id/hor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:id="@+id/gallery"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    
+    >
+
+          
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    </FrameLayout>
+    <FrameLayout
+          android:id="@+id/big"
+          android:layout_marginLeft="0dp"
+          android:layout_marginRight="0dp"
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <ImageView 
+        android:id="@+id/bigimage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+    </FrameLayout>
+   
+
+</FrameLayout>
